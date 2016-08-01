@@ -4,6 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.parsentev.task_002.Point;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 import static org.slf4j.LoggerFactory.getLogger;
 
 /**
@@ -19,17 +22,27 @@ public class Triangle {
     protected final Point second;
     protected final Point third;
 
+    double a;
+    double b;
+    double c;
+
     public Triangle(final Point first, final Point second, final Point third) {
         this.first = first;
         this.second = second;
         this.third = third;
+        a = first.distanceTo(second);
+        b = second.distanceTo(third);
+        c = third.distanceTo(first);
     }
 
     public boolean exists() {
-        throw new UnsupportedOperationException();
+        return ((b+c-a)>0) && ((a+c-b)>0) && ((a+b-c)>0);
     }
 
     public double area() {
-        throw new UnsupportedOperationException();
+        if (!this.exists()) throw new IllegalStateException();
+        BigDecimal bd = new BigDecimal(0.25*(Math.sqrt((a+b+c)*(b+c-a)*(a+c-b)*(a+b-c))));
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 }
