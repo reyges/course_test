@@ -22,9 +22,9 @@ public class Triangle {
     protected final Point second;
     protected final Point third;
 
-    double a;
-    double b;
-    double c;
+    protected double a;
+    protected double b;
+    protected double c;
 
     public Triangle(final Point first, final Point second, final Point third) {
         this.first = first;

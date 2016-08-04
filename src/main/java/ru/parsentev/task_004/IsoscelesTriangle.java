@@ -21,6 +21,7 @@ public class IsoscelesTriangle extends Triangle {
 
     @Override
     public boolean exists() {
-       return super.exists();
+        return super.exists() && ((a == b) || (a == c) || (c == b));
+
     }
 }
