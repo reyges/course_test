@@ -19,15 +19,23 @@ public class Square {
     private final Point second;
     private final Point third;
     private final Point fourth;
+    protected double a;
+    protected double b;
+    protected double c;
+    protected double d;
 
     public Square(final Point first, final Point second, final Point third, final Point fourth) {
         this.first = first;
         this.second = second;
         this.third = third;
         this.fourth = fourth;
+        a = first.distanceTo(second);
+        b = second.distanceTo(third);
+        c = third.distanceTo(fourth);
+        d = fourth.distanceTo(first);
     }
 
     public boolean exists() {
-        throw new UnsupportedOperationException();
+        return (a == b) && (b == c) && (c == d) && (d == a);
     }
 }
