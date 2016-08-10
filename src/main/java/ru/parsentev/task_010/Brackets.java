@@ -19,6 +19,17 @@ public class Brackets {
     }
 
     public boolean isCorrect() {
-        throw new UnsupportedOperationException();
+        int countOpenBr = 0;
+        int countCloseBr = 0;
+        char[] target = line.toCharArray();
+        for (char c : target){
+            if (c == '('){
+                countOpenBr++;
+            }
+            if (c == ')'){
+                countCloseBr++;
+            }
+        }
+        return countOpenBr == countCloseBr;
     }
 }
