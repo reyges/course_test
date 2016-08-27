@@ -11,6 +11,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 
 /**
  * Class Point defines a point in coodrional system (x, y).
+ *
  * @author parsentev
  * @since 19.07.2016
  */
@@ -20,9 +21,24 @@ public class Point {
     private final int x;
     private final int y;
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
     public Point(final int x, final int y) {
         this.x = x;
         this.y = y;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Point)) return false;
+        Point point = (Point) obj;
+        return (x == point.x) && (y == point.y);
     }
 
     public double distanceTo(final Point point) {
