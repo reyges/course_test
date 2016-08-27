@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.parsentev.task_002.Point;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.slf4j.LoggerFactory.getLogger;
@@ -23,7 +24,12 @@ public class Maze {
         this.values = values;
     }
 
-    public List<Point> solution(Point start, Point finish) {
-        throw new UnsupportedOperationException();
+    public List<Point> solution(Point start, Point finish) { return null;
     }
+
+
+
+
+
+
 }
