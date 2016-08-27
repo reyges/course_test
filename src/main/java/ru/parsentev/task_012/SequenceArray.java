@@ -20,6 +20,11 @@ public class SequenceArray {
     }
 
     public boolean containsOneSequence() {
-        throw new UnsupportedOperationException();
+        for (int i = 0; i < values.length - 2; i++) {
+            if (values[i] == 1 && values[i+1] == 1 && values[i+2] == 1){
+                return true;
+            }
+        }
+        return false;
     }
 }
