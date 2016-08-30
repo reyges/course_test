@@ -79,11 +79,11 @@ public class CashMachine {
     }
 
     private static int getMax(ArrayList<Integer> valuesList) {
-        return new Integer(Collections.max(valuesList));
+        return Collections.max(valuesList);
     }
 
     private static int getMin(ArrayList<Integer> valuesList) {
-        return new Integer(Collections.min(valuesList));
+        return Collections.min(valuesList);
     }
 
     private static int sum(ArrayList<Integer> list) {
