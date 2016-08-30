@@ -26,7 +26,7 @@ public class Primes {
     public List<Integer> calc() {
         List<Integer> primesList = new ArrayList<Integer>();
         primesList.add(2);
-        for (int i = 3; i < limit+1; i++) {
+        for (int i = 3; i < limit + 1; i++) {
             for (int j = 0; j < primesList.size(); j++) {
                 if (i % primesList.get(j) == 0) {
                     break;
