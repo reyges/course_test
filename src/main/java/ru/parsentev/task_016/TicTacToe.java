@@ -33,13 +33,13 @@ public class TicTacToe {
                 countDiagonal += values[j][j];
             }
             if (countHorizont == length) {
-                return true;
+                result = true;
             } else countHorizont = 0;
             if (countVertical == length) {
-                return true;
+                result = true;
             } else countVertical = 0;
             if (countDiagonal == length) {
-                return true;
+                result = true;
             }
         }
         return result;
